@@ -17,21 +17,27 @@ class ContaBancaria{
         $saldo = $this->getSaldo();
         if ($this->saldo >= $saque){
             $this->saldo -= $saque;
+            echo 'Saque de '.$saque.' reais realizado com sucesso.';
+            echo '<br>';
             return $this->saldo;
         }else{
             echo 'Não é possivel realizar o saque, valor insuficinte.';
+            echo '<br>';
         }
     }
     public function Depositar($deposito){
         $this->saldo += $deposito;
+        echo 'Deposito de '.$deposito.' reais realizado com sucesso.';
+        echo '<br>';
         return $this->saldo;
     }
     public function Consultar(){
         echo 'Seu saldo atual é:'.$this->getSaldo();
+        echo '<br>';
     }
 }
 $minhaconta = new ContaBancaria("Lara");
 $minhaconta->setSaldo(1000);
 $minhaconta->Depositar(280);
-$minhaconta->Sacar(200);
+$minhaconta->Sacar(100);
 $minhaconta->Consultar();
