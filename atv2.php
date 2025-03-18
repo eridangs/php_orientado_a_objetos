@@ -13,5 +13,5 @@ class Pessoa{
         echo 'Meu nome é '.$this->nome.' e tenho '.$this->idade.' anos.';
     }
 }
-$pessoa = new Pessoa('Lara','17','feminino');
+$pessoa = new Pessoa('João','30','masculino');
 $pessoa->Falar();

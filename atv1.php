@@ -1,17 +1,21 @@
 <?php
 
 class Carro {
-    private $marca = "Chevrolet";
-    private $modelo = "Fusca";
-    private $ano_fabricacao = 1980;
-
+    private $marca;
+    private $modelo;
+    private $ano_fabricacao;
+    public function __construct($marca,$modelo,$ano_fabricacao) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+        $this->ano_fabricacao = $ano_fabricacao;
+    }
     public function MostrarDados(){
-        // $this->marca = $marca;
-        // $this->modelo = $modelo;
-        // $this->ano_fabricacao = $ano_fabricacao;
-        echo "O carro é um ".$this->modelo." da marca ".$this->marca." do ano ".$this->ano_fabricacao;
+        echo 'Marca: '.$this->marca."\n";
+        echo 'Modelo: '.$this->modelo."\n";
+        echo 'Ano de fabricação: '.$this->ano_fabricacao."\n";
+        // echo "O carro é um ".$this->modelo." da marca ".$this->marca." do ano ".$this->ano_fabricacao;
     }
 }
-
-$fusquinha = new Carro();
+echo "Informações do carro:". "<br>";
+$fusquinha = new Carro( "Chevrolet<br/>","Fusca<br/>",1980);
 $fusquinha->MostrarDados();
